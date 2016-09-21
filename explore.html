@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>VOID.BLUE</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script type="text/javascript" src="paper-anywhere/polyfills.js"></script>
+        <script type="text/javascript" src="paper-anywhere/SVGMatrix.js"></script>
+        <script type="text/javascript" src="paper-anywhere/LineAttribute.js"></script>
+        <script type="text/javascript" src="paper-anywhere/Line.js"></script>
+        <script type="text/javascript" src="paper-anywhere/User.js"></script>
+        <script type="text/javascript" src="paper-anywhere/Drawing.js"></script>
+        <script type="text/javascript" src="paper-anywhere/main.js"></script>
+        <style>
+
+#toolbar {
+    top: auto;
+    bottom: 0;
+    background: transparent;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: normal;
+    text-align: center;
+    width: 100%;
+} 
+#toolbar div.button {
+    display: inline-block;
+    border: none;
+    border-radius: none!important;
+    background: transparent;
+    box-shadow: none;
+    padding: 0 2em;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: auto;
+    box-shadow: none!important;
+    border-radius: 0!important;
+}
+#toolbar .toolbarIcon {
+    font-family: inherit;
+}
+#toolbar div.button:active {
+    background: #fff;
+    color: #041b7c;
+}
+
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas"><p>VOID.BLUE requires a javascript canvas aware web browser.</p></canvas>
+        <div id="toolbar" style="display:block!important">
+            <div class="button" id="home" style="display:none!important">
+                <div class="toolbarIcon" id="homeIcon"> </div>
+            </div>
+            <div class="button" id="palette" style="display:none!important">
+                <div class="toolbarIcon" id="paletteIcon"> </div>
+            </div>
+            <div class="button" id="undo">
+                <div class="toolbarIcon" id="undoIcon">Undo</div>
+            </div>
+            <div class="button" id="redo">
+                <div class="toolbarIcon" id="redoIcon">Redo</div>
+            </div>
+        </div>
+        <div id="circleContainer" style="display:none!important">
+          <div id="circleUndoIcon" class="hidden"></div>
+          <div id="circlePaletteIcon" class="hidden"></div>
+          <div id="circleRedoIcon" class="hidden"></div>
+          <div id="circleMenuIcon" class="hidden"></div>
+          <img id="circle" src="gfx/circle.svg" alt="" />
+        </div>
+        <div id="fadeyBit" class="hidden" style="display:none!important"> </div>
+        <div id="card" class="hidden" style="display:none!important">
+            <div id="close"> </div>
+            <div id="brushPreviewBox">
+            <canvas id="brushPreviewCanvas" width="220" height="110">.</canvas>
+            </div>
+            <div id="brushControls">
+                <ul id="swatches">
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                </ul>
+                <div id="lock"></div>
+                    <div id="slider">
+                        <div id="groove-bed"><div id="groove"></div>
+                    </div>
+                    <div id="handle-bed">
+                        <div id="handleFirefoxFix">
+                            <div id="handle"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
