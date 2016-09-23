@@ -53,7 +53,62 @@
         </style>
     </head>
     <body>
-    <h1>THIS IS DIFFERENT</h1>
+        <canvas id="canvas"><p>VOID.BLUE requires a javascript canvas aware web browser.</p></canvas>
+        <div id="toolbar" style="display:block!important">
+            <div class="button" id="home" style="display:none!important">
+                <div class="toolbarIcon" id="homeIcon"> </div>
+            </div>
+            <div class="button" id="palette" style="display:none!important">
+                <div class="toolbarIcon" id="paletteIcon"> </div>
+            </div>
+            <div class="button" id="undo">
+                <div class="toolbarIcon" id="undoIcon">Undo</div>
+            </div>
+            <div class="button" id="redo">
+                <div class="toolbarIcon" id="redoIcon">Redo</div>
+            </div>
+        </div>
+        <div id="circleContainer" style="display:none!important">
+          <div id="circleUndoIcon" class="hidden"></div>
+          <div id="circlePaletteIcon" class="hidden"></div>
+          <div id="circleRedoIcon" class="hidden"></div>
+          <div id="circleMenuIcon" class="hidden"></div>
+          <img id="circle" src="gfx/circle.svg" alt="" />
+        </div>
+        <div id="fadeyBit" class="hidden" style="display:none!important"> </div>
+        <div id="card" class="hidden" style="display:none!important">
+            <div id="close"> </div>
+            <div id="brushPreviewBox">
+            <canvas id="brushPreviewCanvas" width="220" height="110">.</canvas>
+            </div>
+            <div id="brushControls">
+                <ul id="swatches">
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                    <li class="swatch"></li>
+                </ul>
+                <div id="lock"></div>
+                    <div id="slider">
+                        <div id="groove-bed"><div id="groove"></div>
+                    </div>
+                    <div id="handle-bed">
+                        <div id="handleFirefoxFix">
+                            <div id="handle"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script type="text/javascript">
             function isFacebookApp() {
                 var ua = navigator.userAgent || navigator.vendor || window.opera;
