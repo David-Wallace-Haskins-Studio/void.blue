@@ -27,6 +27,7 @@
     font-weight: normal;
     text-align: center;
     width: 100%;
+    position: fixed;
 } 
 #toolbar div.button {
     display: inline-block;
@@ -109,18 +110,5 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript">
-            function isFacebookApp() {
-                var ua = navigator.userAgent || navigator.vendor || window.opera;
-                return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
-            }
-            window.document.onload = function(){ 
-                setTimeout(function(){
-                    document.getElementById("toolbar").style.marginBottom = "288px";
-                    if (isFacebookApp()) {
-                    }
-                }, 750);
-            }
-        </script>
     </body>
 </html>
