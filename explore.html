@@ -114,13 +114,12 @@
                 var ua = navigator.userAgent || navigator.vendor || window.opera;
                 return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
             }
-            window.document.onload = function(e){ 
-                var ua = navigator.userAgent || navigator.vendor || window.opera;
-                alert(ua);
-                if (isFacebookApp()) {
-                    alert('facebookApp')
-                    document.getElementById("toolbar").style.marginBottom = "88px";
-                }
+            window.document.onload = function(){ 
+                setTimeout(function(){
+                    if (isFacebookApp()) {
+                        document.getElementById("toolbar").style.marginBottom = "88px";
+                    }
+                }, 750);
             }
         </script>
     </body>
