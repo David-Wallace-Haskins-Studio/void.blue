@@ -20,7 +20,7 @@
 
 #toolbar {
     top: auto;
-    bottom: 44px;
+    bottom: 0;
     background: transparent;
     color: #fff;
     font-family: sans-serif;
@@ -48,9 +48,6 @@
 #toolbar div.button:active {
     background: #fff;
     color: #041b7c;
-}
-body {
-    max-height: calc(100vh - 88px);
 }
 
         </style>
@@ -112,5 +109,16 @@ body {
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            function isFacebookApp() {
+                var ua = navigator.userAgent || navigator.vendor || window.opera;
+                return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+            }
+            window.document.onload = function(e){ 
+                if (isFacebookApp()) {
+                    document.getElementById('toolbar').style.marginBottom = "88px";
+                }
+            }
+        </script>
     </body>
 </html>
