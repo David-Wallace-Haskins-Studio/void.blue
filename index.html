@@ -46,12 +46,23 @@ body {
   background:#041b7c;
   margin: 0;
   padding: 0;
+  height: 100px;
   color: #fff;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
   font-family: "NeutrafaceText-Book",  sans-serif;
 }
-html, body { overflow: hidden; height: 100% }
+html {
+  background:#041b7c;
+}
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background:#041b7c;
+}
 #menu {
   position: absolute;
   opacity: 0;
@@ -163,23 +174,24 @@ and (max-device-width : 736px) {
         </style>
     </head>
     <body>
-        <div class="table" style="position:fixed">
-            <div class="table-cell"><a href="explore.html" class="main-link">VOID.BLUE</a></div>
-        </div>
-        <input type="checkbox" id="menu">
-        <div class="menu-box">
-            <h2 class="mark">VOID.BLUE</h2>
-            <div>
-                <h3>an artwork of infinite space</h3>
-                <div class="table">
-                    <div class="table-cell">
-                        <h2 class="explainer">make a mark</h2>
-                        <h2 class="explainer">zoom in/out</h2>
-                    </div>
-                </div>
-                <a href="http://davidwallacehaskins.com/work/voidblue" target="_blank" class="about-link">ABOUT</a>
-            </div>
-        </div>
-        <label class="menu-button" for="menu"></label>
+      <div id="background"></div>
+      <div class="table" style="position:fixed">
+          <div class="table-cell"><a href="explore.html" class="main-link">VOID.BLUE</a></div>
+      </div>
+      <input type="checkbox" id="menu">
+      <div class="menu-box">
+          <h2 class="mark">VOID.BLUE</h2>
+          <div>
+              <h3>an artwork of infinite space</h3>
+              <div class="table">
+                  <div class="table-cell">
+                      <h2 class="explainer">make a mark</h2>
+                      <h2 class="explainer">zoom in/out</h2>
+                  </div>
+              </div>
+              <a href="http://davidwallacehaskins.com/work/voidblue" target="_blank" class="about-link">ABOUT</a>
+          </div>
+      </div>
+      <label class="menu-button" for="menu"></label>
     </body>
 </html>
