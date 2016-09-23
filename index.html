@@ -79,7 +79,7 @@ body {
   background: #0b1a9b;
 }
 .menu-box {
-  position: absolute;
+  position: fixed;
   top: 1em;
   right: 1em;
   width: calc(100% - 2em);
@@ -158,13 +158,13 @@ h3 {
 @media only screen 
 and (max-device-width : 736px) {
   .table, .menu-box {
-    max-height: calc(100vh - 88px);
+    max-height: calc(100vh - 140px);
   }
 }
         </style>
     </head>
     <body>
-        <div class="table">
+        <div class="table" style="position:fixed">
             <div class="table-cell"><a href="explore.html" class="main-link">VOID.BLUE</a></div>
         </div>
         <input type="checkbox" id="menu">
