@@ -10,10 +10,10 @@
   // First try to alias native versions
   for (x = 0; x < vendors.length && !window.requestAnimationFrame; x += 1) {
     window.requestAnimationFrame = window[vendors[x] +
-            'RequestAnimationFrame']
+      'RequestAnimationFrame']
     window.cancelAnimationFrame = window[vendors[x] +
-            'CancelAnimationFrame'] || window[vendors[x] +
-            'CancelRequestAnimationFrame']
+      'CancelAnimationFrame'] || window[vendors[x] +
+        'CancelRequestAnimationFrame']
   }
 
   function frame () {

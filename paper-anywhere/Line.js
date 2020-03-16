@@ -29,7 +29,7 @@ function Line (obj) {
 
 Line.prototype.addPoint = function (x, y, t) {
   if ((this.t.length === 0) || (this.x[this.t.length - 1] !== x) ||
-            (this.y[this.t.length - 1] !== y)) {
+    (this.y[this.t.length - 1] !== y)) {
     this.x.push(x)
     this.y.push(y)
     this.t.push(t || Date.now()) // and maybe a time sync thing later.

@@ -67,9 +67,9 @@ SVGMatrix.prototype.scale = function (scaleFactor, cx, cy) {
     this.c * scaleFactor,
     this.d * scaleFactor,
     (this.a - this.a * scaleFactor) * cx +
-            (this.c - this.c * scaleFactor) * cy + this.e,
+    (this.c - this.c * scaleFactor) * cy + this.e,
     (this.b - this.b * scaleFactor) * cx +
-            (this.d - this.d * scaleFactor) * cy + this.f
+    (this.d - this.d * scaleFactor) * cy + this.f
   )
 }
 
@@ -83,9 +83,9 @@ SVGMatrix.prototype.scaleNonUniform = function (scaleFactorX, scaleFactorY, cx, 
     this.c * scaleFactorY,
     this.d * scaleFactorY,
     (this.a - this.a * scaleFactorX) * cx +
-            (this.c - this.c * scaleFactorY) * cy + this.e,
+    (this.c - this.c * scaleFactorY) * cy + this.e,
     (this.b - this.b * scaleFactorX) * cx +
-            (this.d - this.d * scaleFactorY) * cy + this.f
+    (this.d - this.d * scaleFactorY) * cy + this.f
   )
 }
 
@@ -100,9 +100,9 @@ SVGMatrix.prototype.rotate = function (angle, cx, cy) {
     this.a * -sine + this.c * cosine,
     this.b * -sine + this.d * cosine,
     (this.a * sine - this.c * cosine + this.c) * cy +
-            (-this.c * sine - this.a * cosine + this.a) * cx + this.e,
+    (-this.c * sine - this.a * cosine + this.a) * cx + this.e,
     (this.b * sine - this.d * cosine + this.d) * cy +
-            (-this.d * sine - this.b * cosine + this.b) * cx + this.f
+    (-this.d * sine - this.b * cosine + this.b) * cx + this.f
   )
 }
 

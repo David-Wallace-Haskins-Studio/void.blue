@@ -387,7 +387,7 @@ Drawing.prototype.pageLoad = function () {
   var store = JSON.parse(window.localStorage.getItem('paperAnywhere')) || {}
 
   if (store.version === 'Alpha 3' && store.localPage === true &&
-            store.localUser) {
+    store.localUser) {
     this.data.localUser = new User(store.localUser)
     this.localUser = this.data.localUser
     this.doFullRedraw = true

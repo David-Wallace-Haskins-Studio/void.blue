@@ -29,7 +29,7 @@ function User (obj) {
 
   // these properties only appears for the local user
   if (obj.view && obj.palette && Object.prototype.hasOwnProperty.call(obj, 'selectedColorIndex') &&
-            Object.prototype.hasOwnProperty.call(obj, 'strokeWidth') && Object.prototype.hasOwnProperty.call(obj, 'sliderLock')) {
+    Object.prototype.hasOwnProperty.call(obj, 'strokeWidth') && Object.prototype.hasOwnProperty.call(obj, 'sliderLock')) {
     this.view = new SVGMatrix(obj.view)
     this.palette = obj.palette.slice(0) // duplicate for safety
     this.selectedColorIndex = obj.selectedColorIndex
