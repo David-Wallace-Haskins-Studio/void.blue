@@ -1,0 +1,12 @@
+{
+  "extends": "standard",
+  "rules": {},
+  "globals": {
+    "Drawing": true,
+    "mainDrawing": true,
+    "SVGMatrix": true,
+    "LineAttribute": true,
+    "Line": true,
+    "User": true,
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "void.blue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "paper-anywhere/main.js",
+  "scripts": {
+    "lint": "eslint . --color",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David-Wallace-Haskins-Studio/void.blue.git"
+  },
+  "keywords": [],
+  "contributors": [
+    "Sean Zellmer <sean@lejeunerenard.com> (http://lejeunerenard.com/)",
+    "Drew Vosburg <drew.vosburg@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/David-Wallace-Haskins-Studio/void.blue/issues"
+  },
+  "homepage": "https://github.com/David-Wallace-Haskins-Studio/void.blue#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
