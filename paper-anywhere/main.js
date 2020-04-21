@@ -65,14 +65,8 @@ window.addEventListener('DOMContentLoaded', function () {
         }); */
   }
 
-  resizeTouchCircle()
   mainDrawing.setBrushPreviewContext(brushPreviewContext)
   mainDrawing.setCanvasContext(context)
-  mainDrawing.setScreenMetrics(
-    window.innerWidth,
-    window.innerHeight,
-    window.devicePixelRatio || 1
-  )
 
   function windowResize () {
     resizeTouchCircle()
@@ -83,6 +77,7 @@ window.addEventListener('DOMContentLoaded', function () {
       window.devicePixelRatio || 1
     )
   }
+  windowResize()
 
   function closePalette (event) {
     window.requestAnimationFrame(function () {
