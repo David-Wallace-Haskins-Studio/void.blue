@@ -26,13 +26,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
   mainDrawing.pageLoad()
   function initializePalette () {
-    var swatches = document.getElementsByClassName('swatch'); var i
+    var swatches = document.getElementsByClassName('swatch');
 
     mainDrawing.viewChange()
 
     window.requestAnimationFrame(function () {
       var k = mainDrawing.localUser.strokeWidth
-      for (i = 0; i < swatches.length; i += 1) {
+      for (var i = 0; i < swatches.length; i += 1) {
         swatches[i].style.backgroundColor = mainDrawing.localUser.palette[i]
         if (i === mainDrawing.localUser.selectedColorIndex) {
           swatches[i].classList.add('selected')
@@ -311,16 +311,14 @@ window.addEventListener('DOMContentLoaded', function () {
     event.stopPropagation()
   }
   function moveFinger (event) {
-    var i,
-      gestureCoords
     if (drawLock || timerId) {
-      for (i = 0; i < event.changedTouches.length; i += 1) {
+      for (var i = 0; i < event.changedTouches.length; i += 1) {
         if (event.changedTouches[i].identifier === primaryFinger) {
           mainDrawing.addPoint(event.changedTouches[i].pageX, event.changedTouches[i].pageY)
         }
       }
     } else if (event.touches.length > 1) {
-      gestureCoords = [
+      var gestureCoords = [
         event.touches[0].pageX,
         event.touches[0].pageY,
         event.touches[1].pageX,
@@ -545,14 +543,13 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   }
   function releaseFingerCircle (event) {
-    var i
     document.getElementById('circleUndoIcon').classList.add('hidden')
     document.getElementById('circleRedoIcon').classList.add('hidden')
     document.getElementById('circlePaletteIcon').classList.add('hidden')
     document.getElementById('circleMenuIcon').classList.add('hidden')
     if (circleIsDown) {
       if (!undoRedoMode) {
-        for (i = 0; i < event.changedTouches.length; i += 1) {
+        for (var i = 0; i < event.changedTouches.length; i += 1) {
           if (event.changedTouches[i].identifier === primaryFinger) {
             o.radius = (window.screen.width < window.screen.height)
               ? window.screen.width / 10 : window.screen.height / 10
