@@ -4,6 +4,7 @@
   "description": "",
   "main": "paper-anywhere/main.js",
   "scripts": {
+    "start": "python -m SimpleHTTPServer",
     "lint": "eslint . --color",
     "test": "npm run lint"
   },
